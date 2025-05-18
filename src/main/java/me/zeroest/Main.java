@@ -42,11 +42,9 @@ public class Main {
     }
 
     private static void saveMember(EntityManager em, long id, String name) {
-        Member member = new Member();
-        member.setId(id);
-        member.setName(name);
-
+        Member member = new Member(id, name);
         em.persist(member);
+        System.out.println("save member = " + member);
     }
 
     private static Member findMember(EntityManager em, long id) {
