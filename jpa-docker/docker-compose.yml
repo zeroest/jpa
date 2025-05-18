@@ -12,3 +12,9 @@ services:
       - ./db/mysql/init:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: 1234
+
+#  https://velog.io/@dailylifecoding/DBeaver-MySQL-connecting-error-Public-Key-Retrieval-is-not-allowed-solved
+# Public Key Retrieval is not allowed
+# 아래 값을 커넥션 프로퍼티에 추가 또는 수정해줄것
+#  allowPublicKeyRetrieval=true
+#  useSSL=false

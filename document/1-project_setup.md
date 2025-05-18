@@ -47,9 +47,15 @@ jpa 설정 파일
 </persistence>
 ```
 
-- JPA는 특정 데이터베이스에 종속 X
 - Dialect (방언): SQL 표준을 지키지 않는 특정 데이터베이스만의 고유한 기능
-- 각각의 데이터베이스가 제공하는 SQL 문법과 함수는 조금씩 다름
-- 가변 문자: MySQL은 VARCHAR, Oracle은 VARCHAR2
-- 문자열을 자르는 함수: SQL 표준은 SUBSTRING(), Oracle은 SUBSTR()
-- 페이징: MySQL은 LIMIT , Oracle은 ROWNUM
+  - JPA는 특정 데이터베이스에 종속 X
+  - 각각의 데이터베이스가 제공하는 SQL 문법과 함수는 조금씩 다름
+  - 가변 문자: MySQL은 VARCHAR, Oracle은 VARCHAR2
+  - 문자열을 자르는 함수: SQL 표준은 SUBSTRING(), Oracle은 SUBSTR()
+  - 페이징: MySQL은 LIMIT , Oracle은 ROWNUM
+
+- hibernate.hbm2ddl.auto: SessionFactory가 생성될때 스키마 DDL을 db로 검증하고 내보내는 기능을 상황에 따라 다르게 설정할수 있도록 하는 프로퍼티
+  - create : SessionFactory 시작시 스키마를 삭제하고 다시 생성
+  - create-drop : SessionFactory 종료시 스키마를 삭제
+  - update : SessionFactory 시작시 객체 구성와 스키마를 비교하여 컬럼 추가/삭제 작업을 진행함. 기존의 스키마를 삭제하지 않고 유지.
+  - validate : SessionFactory 시작시 객체구성과 스키마가 다르다면 예외 발생시킴.
