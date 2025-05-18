@@ -1,4 +1,6 @@
-package me.zeroest.entity.generated_value_strategy;
+package example;
+
+import example.entity.generated_value_strategy.StrategySequence;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -41,7 +43,7 @@ Hibernate:
 ================ SAVE START ===================
 ================= SAVE END ==================
 Hibernate:
-    /* insert me.zeroest.entity.generated_value_strategy.StrategySequence
+    /* insert example.entity.generated_value_strategy.StrategySequence
         / insert
         into
         StrategySequence
@@ -49,7 +51,7 @@ Hibernate:
         values
         (?, ?)
         Hibernate:
-        /* insert me.zeroest.entity.generated_value_strategy.StrategySequence
+        /* insert example.entity.generated_value_strategy.StrategySequence
          / insert
         into
         StrategySequence
@@ -57,7 +59,7 @@ Hibernate:
         values
         (?, ?)
         Hibernate:
-        /* insert me.zeroest.entity.generated_value_strategy.StrategySequence
+        /* insert example.entity.generated_value_strategy.StrategySequence
          / insert
         into
         StrategySequence
@@ -65,7 +67,7 @@ Hibernate:
         values
         (?, ?)
         Hibernate:
-        /* insert me.zeroest.entity.generated_value_strategy.StrategySequence
+        /* insert example.entity.generated_value_strategy.StrategySequence
          / insert
         into
         StrategySequence
@@ -73,7 +75,7 @@ Hibernate:
         values
         (?, ?)
         Hibernate:
-        /* insert me.zeroest.entity.generated_value_strategy.StrategySequence
+        /* insert example.entity.generated_value_strategy.StrategySequence
          / insert
         into
         StrategySequence
@@ -81,7 +83,7 @@ Hibernate:
         values
         (?, ?)
         Hibernate:
-        /* insert me.zeroest.entity.generated_value_strategy.StrategySequence
+        /* insert example.entity.generated_value_strategy.StrategySequence
          / insert
         into
         StrategySequence
@@ -89,7 +91,7 @@ Hibernate:
         values
         (?, ?)
         Hibernate:
-        /* insert me.zeroest.entity.generated_value_strategy.StrategySequence
+        /* insert example.entity.generated_value_strategy.StrategySequence
          / insert
         into
         StrategySequence
@@ -97,7 +99,7 @@ Hibernate:
         values
         (?, ?)
         Hibernate:
-        /* insert me.zeroest.entity.generated_value_strategy.StrategySequence
+        /* insert example.entity.generated_value_strategy.StrategySequence
          / insert
         into
         StrategySequence

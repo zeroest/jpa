@@ -1,6 +1,6 @@
-package me.zeroest;
+package example;
 
-import me.zeroest.entity.Member;
+import example.entity.Member;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("mysql");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("h2");
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction tx = em.getTransaction();

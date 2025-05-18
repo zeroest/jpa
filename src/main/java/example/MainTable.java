@@ -1,4 +1,6 @@
-package me.zeroest.entity.generated_value_strategy;
+package example;
+
+import example.entity.generated_value_strategy.StrategyTable;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -81,7 +83,7 @@ Hibernate:
         and sequence_name=?
 ================= SAVE END ==================
 Hibernate:
-    /* insert me.zeroest.entity.generated_value_strategy.StrategyTable
+    /* insert example.entity.generated_value_strategy.StrategyTable
         / insert
         into
         StrategyTable
@@ -89,7 +91,7 @@ Hibernate:
         values
         (?, ?)
         Hibernate:
-        /* insert me.zeroest.entity.generated_value_strategy.StrategyTable
+        /* insert example.entity.generated_value_strategy.StrategyTable
          / insert
         into
         StrategyTable
@@ -99,7 +101,7 @@ Hibernate:
 */
 public class MainTable {
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("mysql");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("h2");
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction tx = em.getTransaction();

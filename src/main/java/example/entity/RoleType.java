@@ -1,4 +1,4 @@
-package me.zeroest.entity;
+package example.entity;
 
 public enum RoleType {
     CUSTOMER,

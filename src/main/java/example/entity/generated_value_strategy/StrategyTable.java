@@ -1,4 +1,4 @@
-package me.zeroest.entity.generated_value_strategy;
+package example.entity.generated_value_strategy;
 
 import lombok.Getter;
 import lombok.Setter;
