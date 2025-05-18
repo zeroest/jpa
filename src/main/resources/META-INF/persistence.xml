@@ -25,14 +25,18 @@
         </properties>
     </persistence-unit>
 
-    <persistence-unit name="mysql">
+    <persistence-unit name="mysql-jpashop">
+        <class>me.zeroest.jpashop.domain.Item</class>
+        <class>me.zeroest.jpashop.domain.Member</class>
+        <class>me.zeroest.jpashop.domain.Order</class>
+        <class>me.zeroest.jpashop.domain.OrderItem</class>
 
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.password" value="1234"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:13306/hello"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:13306/jpashop"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
             <!-- 옵션 -->
             <property name="hibernate.show_sql" value="true"/>
