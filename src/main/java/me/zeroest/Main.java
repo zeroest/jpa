@@ -68,6 +68,8 @@ public class Main {
 
     private static List<Member> findAllMembers(EntityManager em) {
         List<Member> members = em.createQuery("select m from Member m", Member.class)
+                .setFirstResult(5)
+                .setMaxResults(8)
                 .getResultList();
         System.out.println("find all members = " + members);
         return members;
