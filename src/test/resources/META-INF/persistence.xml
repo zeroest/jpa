@@ -6,6 +6,8 @@
     <persistence-unit name="mysql-jpashop-test">
         <class>me.zeroest.jpashop.domain.Item</class>
         <class>me.zeroest.jpashop.domain.Member</class>
+        <class>me.zeroest.jpashop.domain.MemberInfo</class>
+        <class>me.zeroest.jpashop.domain.Address</class>
         <class>me.zeroest.jpashop.domain.Order</class>
         <class>me.zeroest.jpashop.domain.OrderItem</class>
 

@@ -2,9 +2,6 @@ package me.zeroest.jpashop.domain;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MemberTest extends JpaTestContext {
@@ -12,18 +9,18 @@ class MemberTest extends JpaTestContext {
     @Test
     void findOrdersTest() {
         Member member = new Member();
-        member.setName("a");
         em.persist(member);
 
-        Order order1 = new Order();
-        order1.setStatus(OrderStatus.ORDER);
-        order1.setMember(member);
-        em.persist(order1);
+        Address address = new Address();
+        address.setCity("seoul");
+        address.setZipCode("0123");
+        em.persist(address);
 
-        Order order2 = new Order();
-        order2.setStatus(OrderStatus.CANCEL);
-        order2.setMember(member);
-        em.persist(order2);
+        MemberInfo memberInfo = new MemberInfo();
+        memberInfo.setName("a");
+        memberInfo.setMember(member);
+        memberInfo.setAddress(address);
+        em.persist(memberInfo);
 
         em.flush();
         em.clear();
@@ -32,9 +29,14 @@ class MemberTest extends JpaTestContext {
         System.out.println("findedMember = " + findedMember);
         System.out.println("findedMember.getOrders() = " + findedMember.getOrders());
         assertEquals(member, findedMember);
-        assertEquals(2, findedMember.getOrders().size());
-        assertEquals(2, member.getOrders().size());
-        assertArrayEquals(member.getOrders().toArray(), findedMember.getOrders().toArray());
+        MemberInfo findedMemberInfo = findedMember.getInfo();
+        System.out.println("findedMemberInfo = " + findedMemberInfo);
+        assertEquals(memberInfo, findedMemberInfo);
+        Address findedAddress = memberInfo.getAddress();
+        System.out.println("findedAddress = " + findedAddress);
+        assertEquals(address, findedAddress);
+        MemberInfo memberInfoByAddress = findedAddress.getMemberInfo();
+        System.out.println("memberInfoByAddress = " + memberInfoByAddress);
     }
 
 }

@@ -20,13 +20,8 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
-    private String name;
-
-    private String city;
-
-    private String street;
-
-    private String zipCode;
+    @OneToOne(mappedBy = "member", cascade = CascadeType.ALL)
+    private MemberInfo info;
 
     @ToString.Exclude
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)

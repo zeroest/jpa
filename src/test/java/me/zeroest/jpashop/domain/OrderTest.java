@@ -11,7 +11,6 @@ class OrderTest extends JpaTestContext {
     @Test
     void persistTest() {
         Member member = new Member();
-        member.setName("a");
         em.persist(member);
 
         Order order = new Order();
