@@ -25,8 +25,9 @@ dependencies {
     // hibernate
     implementation("org.hibernate:hibernate-entitymanager:5.6.15.Final")
 
-    // mysql connector
+    // database connector
     implementation("com.mysql:mysql-connector-j:8.4.0")
+    implementation("com.h2database:h2:2.2.224")
 
     // lombok
     compileOnly 'org.projectlombok:lombok:1.18.38'

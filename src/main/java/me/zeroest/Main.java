@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("mysql");
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction tx = em.getTransaction();
@@ -60,7 +60,7 @@ public class Main {
 
     private static void updateMember(Member member, String name) {
         // jpa 를 통해 엔티티를 가져오면 트랜젝션 커밋 시점에 변경내역을 체크
-        member.setName(name);
+        member.setUsername(name);
         System.out.println("update member = " + member);
     }
 

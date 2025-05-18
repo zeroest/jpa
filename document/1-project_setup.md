@@ -55,7 +55,12 @@ jpa 설정 파일
   - 페이징: MySQL은 LIMIT , Oracle은 ROWNUM
 
 - hibernate.hbm2ddl.auto: SessionFactory가 생성될때 스키마 DDL을 db로 검증하고 내보내는 기능을 상황에 따라 다르게 설정할수 있도록 하는 프로퍼티
+  - DDL 생성 기능은 DDL을 자동 생성할 때만 사용되고 JPA의 실행 로직에는 영향을 주지 않는다. 
   - create : SessionFactory 시작시 스키마를 삭제하고 다시 생성
+    - 기존테이블 삭제 후 다시 생성 (DROP + CREATE)
   - create-drop : SessionFactory 종료시 스키마를 삭제
+    - create와 같으나 종료시점에 테이블 DROP
   - update : SessionFactory 시작시 객체 구성와 스키마를 비교하여 컬럼 추가/삭제 작업을 진행함. 기존의 스키마를 삭제하지 않고 유지.
+    - 변경분만 반영(운영DB에는 사용하면 안됨)
   - validate : SessionFactory 시작시 객체구성과 스키마가 다르다면 예외 발생시킴.
+    - 엔티티와 테이블이 정상 매핑되었는지만 확인
