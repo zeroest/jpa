@@ -156,4 +156,5 @@
 
 - fetch: 글로벌 페치 전략을 설정
   - @ManyToOne=FetchType.EAGER
+  - @OneToOne=FetchType.EAGER
   - @OneToMany=FetchType.LAZY
