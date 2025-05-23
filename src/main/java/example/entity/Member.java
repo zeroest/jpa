@@ -5,7 +5,9 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -23,6 +25,7 @@ public class Member {
     }
 
     @Id
+    @Column(name = "member_id")
     private Long id;
     @Column(name = "name")
     private String username;
@@ -35,5 +38,11 @@ public class Member {
     private Date lastModifiedDate;
     @Lob
     private String description;
+
+    @ManyToMany
+    @JoinTable(name = "MEMBER_PRODUCT",
+    joinColumns = @JoinColumn(name = "member_id"),
+    inverseJoinColumns = @JoinColumn(name = "product_id"))
+    private List<Product> products = new ArrayList<>();
 
 }

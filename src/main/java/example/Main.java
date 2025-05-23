@@ -1,6 +1,7 @@
 package example;
 
 import example.entity.Member;
+import example.entity.Team;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -30,6 +31,21 @@ public class Main {
             removeMember(em, aMember);
 
             updateMember(bMember, "B");
+
+            // ==========================
+            em.flush();
+            em.clear();
+            System.out.println("==========================================");
+            System.out.println("==========================================");
+            System.out.println("==========================================");
+
+            Member am = findMember(em, 2);
+
+            Team team = new Team();
+            team.setName("teamA");
+
+            em.persist(team);
+            team.getMembers().add(am);
 
             tx.commit();
         } catch (Exception e) {
