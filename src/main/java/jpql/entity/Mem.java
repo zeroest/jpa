@@ -34,6 +34,9 @@ public class Mem {
 
     private int age;
 
+    @Enumerated(EnumType.STRING)
+    private MemType type;
+
     @Embedded
     private Ads address;
 
