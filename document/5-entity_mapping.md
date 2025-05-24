@@ -153,8 +153,3 @@
   - AUTO: 방언에 따라 자동 지정, 기본값
 
 ## 연관 관계
-
-- fetch: 글로벌 페치 전략을 설정
-  - @ManyToOne=FetchType.EAGER
-  - @OneToOne=FetchType.EAGER
-  - @OneToMany=FetchType.LAZY

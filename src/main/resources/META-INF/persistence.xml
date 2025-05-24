@@ -5,6 +5,8 @@
     <persistence-unit name="h2-proxy">
         <class>proxy.Member</class>
         <class>proxy.Team</class>
+        <class>proxy.cascade.Parent</class>
+        <class>proxy.cascade.Child</class>
 
         <properties>
             <!-- 필수 속성 -->
